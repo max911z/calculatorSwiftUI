@@ -11,6 +11,10 @@
 		BE1D25E527B14C960013469D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D25E427B14C960013469D /* ContentView.swift */; };
 		BE1D25E727B14C970013469D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25E627B14C970013469D /* Assets.xcassets */; };
 		BE1D25EA27B14C970013469D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25E927B14C970013469D /* Preview Assets.xcassets */; };
+		BE1D25F427B14EB30013469D /* Digital.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25F327B14EB30013469D /* Digital.otf */; };
+		BE1D25F727B14EF70013469D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25F627B14EF70013469D /* Montserrat-Bold.ttf */; };
+		BE1D260127B152D50013469D /* MuseoSansCyrl-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE1D260027B152D50013469D /* MuseoSansCyrl-700.ttf */; };
+		BE1D260A27B1865B0013469D /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D260927B1865B0013469D /* ScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		BE1D25E627B14C970013469D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1D25E927B14C970013469D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE1D25EB27B14C970013469D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE1D25F327B14EB30013469D /* Digital.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digital.otf; sourceTree = "<group>"; };
+		BE1D25F627B14EF70013469D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		BE1D260027B152D50013469D /* MuseoSansCyrl-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSansCyrl-700.ttf"; sourceTree = "<group>"; };
+		BE1D260927B1865B0013469D /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,13 @@
 		BE1D25E127B14C960013469D /* calculatorSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */,
 				BE1D25E427B14C960013469D /* ContentView.swift */,
 				BE1D25E627B14C970013469D /* Assets.xcassets */,
 				BE1D25EB27B14C970013469D /* Info.plist */,
 				BE1D25E827B14C970013469D /* Preview Content */,
+				BE1D260927B1865B0013469D /* ScreenView.swift */,
 			);
 			path = calculatorSwiftUI;
 			sourceTree = "<group>";
@@ -67,6 +77,16 @@
 				BE1D25E927B14C970013469D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE1D25F227B14E690013469D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D25F627B14EF70013469D /* Montserrat-Bold.ttf */,
+				BE1D25F327B14EB30013469D /* Digital.otf */,
+				BE1D260027B152D50013469D /* MuseoSansCyrl-700.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1D260127B152D50013469D /* MuseoSansCyrl-700.ttf in Resources */,
+				BE1D25F727B14EF70013469D /* Montserrat-Bold.ttf in Resources */,
 				BE1D25EA27B14C970013469D /* Preview Assets.xcassets in Resources */,
 				BE1D25E727B14C970013469D /* Assets.xcassets in Resources */,
+				BE1D25F427B14EB30013469D /* Digital.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1D260A27B1865B0013469D /* ScreenView.swift in Sources */,
 				BE1D25E527B14C960013469D /* ContentView.swift in Sources */,
 				BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */,
 			);
