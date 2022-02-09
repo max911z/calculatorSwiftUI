@@ -63,10 +63,10 @@
 				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */,
 				BE1D25E427B14C960013469D /* ContentView.swift */,
+				BE1D260927B1865B0013469D /* ScreenView.swift */,
 				BE1D25E627B14C970013469D /* Assets.xcassets */,
 				BE1D25EB27B14C970013469D /* Info.plist */,
 				BE1D25E827B14C970013469D /* Preview Content */,
-				BE1D260927B1865B0013469D /* ScreenView.swift */,
 			);
 			path = calculatorSwiftUI;
 			sourceTree = "<group>";

@@ -8,19 +8,40 @@
 import SwiftUI
 
 struct ScreenView: View {
-
+    
+    private var textFrameWidth: CGFloat = 400
+    private var textFrameHeight: CGFloat = 70
+    
     var body: some View {
-        GeometryReader { geometry in
-        ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.init("initColor"), Color.init("finalColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
-            Image("digitalPlaceholder")
-                        .resizable()
-                        .scaledToFit()
-                .padding(EdgeInsets(top: 0, leading: 48, bottom: 0, trailing: 48))
-        }.frame(width: geometry.size.width, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
+        GeometryReader{g in
+            ZStack{
+                LinearGradient(gradient: Gradient(colors: [Color.init("initColor"), Color.init("finalColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .frame(maxWidth: .infinity, maxHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.init("backgroundColor"))
+                            .shadow(color: Color.black, radius: 9, x: 0, y: 0)
+                    )
+                    .clipped()
+                
+                HStack{
+                    Text("0000000000")
+                        .font(.custom("Digital", size: g.size.height > g.size.width ? g.size.width * 0.18: g.size.height * 0.18))
+                        .opacity(0.2)
+                        .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
+                    Spacer()
+                }
+                
+                HStack{
+                    Text("0000")
+                        .font(.custom("Digital", size: g.size.height > g.size.width ? g.size.width * 0.18: g.size.height * 0.18))
+                        .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
+                    Spacer()
+                }
+            }
         }
+        
     }
 }
 

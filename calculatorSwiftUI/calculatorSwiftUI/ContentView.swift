@@ -17,12 +17,13 @@ struct ContentView: View {
                     Text("Calculator")
                         .font(.custom("MuseoSansCyrl-700", size: 28))
                     Spacer()
-                } .padding(.leading, 24)
+                } .padding(EdgeInsets(top: 24, leading: 24, bottom: 24, trailing: 0))
                 
                 ScreenView()
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                     
                 Spacer()
-            } .padding(.top, 24)
+            }
         }
     }
 }
