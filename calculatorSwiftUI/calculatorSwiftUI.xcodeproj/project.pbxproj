@@ -15,6 +15,8 @@
 		BE1D25F727B14EF70013469D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25F627B14EF70013469D /* Montserrat-Bold.ttf */; };
 		BE1D260127B152D50013469D /* MuseoSansCyrl-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE1D260027B152D50013469D /* MuseoSansCyrl-700.ttf */; };
 		BE1D260A27B1865B0013469D /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D260927B1865B0013469D /* ScreenView.swift */; };
+		BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB336FD27B531360014E4A0 /* CalcButtons.swift */; };
+		BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3370227B574D40014E4A0 /* KeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BE1D25F627B14EF70013469D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		BE1D260027B152D50013469D /* MuseoSansCyrl-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSansCyrl-700.ttf"; sourceTree = "<group>"; };
 		BE1D260927B1865B0013469D /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		BEB336FD27B531360014E4A0 /* CalcButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtons.swift; sourceTree = "<group>"; };
+		BEB3370227B574D40014E4A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +64,15 @@
 		BE1D25E127B14C960013469D /* calculatorSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */,
 				BE1D25E427B14C960013469D /* ContentView.swift */,
 				BE1D260927B1865B0013469D /* ScreenView.swift */,
+				BEB3370227B574D40014E4A0 /* KeyboardView.swift */,
 				BE1D25E627B14C970013469D /* Assets.xcassets */,
 				BE1D25EB27B14C970013469D /* Info.plist */,
+				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E827B14C970013469D /* Preview Content */,
+				BEB336FD27B531360014E4A0 /* CalcButtons.swift */,
 			);
 			path = calculatorSwiftUI;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			files = (
 				BE1D260A27B1865B0013469D /* ScreenView.swift in Sources */,
 				BE1D25E527B14C960013469D /* ContentView.swift in Sources */,
+				BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */,
+				BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */,
 				BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

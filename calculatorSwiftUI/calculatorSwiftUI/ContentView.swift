@@ -15,15 +15,17 @@ struct ContentView: View {
             VStack{
                 HStack {
                     Text("Calculator")
-                        .font(.custom("MuseoSansCyrl-700", size: 28))
+                        .font(.custom("MuseoSansCyrl-700", size: (UIScreen.main.bounds.width - (5*12)) / 11))
+                        .padding(EdgeInsets(top: 24, leading: 24, bottom: 0, trailing: 0))
                     Spacer()
-                } .padding(EdgeInsets(top: 24, leading: 24, bottom: 24, trailing: 0))
-                
-                ScreenView()
-                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
-                    
+                }
                 Spacer()
+                ScreenView()
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 25, trailing: 24))
+                KeyboardView()
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             }
+            .padding(.bottom, 20)
         }
     }
 }
@@ -31,6 +33,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        
     }
 }
