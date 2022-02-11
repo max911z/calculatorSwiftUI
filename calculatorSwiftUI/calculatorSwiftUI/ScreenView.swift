@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+
+
 struct ScreenView: View {
+    
+    @Binding var screenValue : String
+    @Binding var currentOperation: Operation
+    @Binding var nextNumber : Double
     
     var body: some View {
         ZStack{
@@ -22,27 +28,32 @@ struct ScreenView: View {
                 .clipped()
             HStack{
                 Text("8888888888")
+                    .kerning(5)
                     .lineLimit(1)
-                    .font(.custom("Digital", size: (UIScreen.main.bounds.width - (5*12)) / 5.25))
+                    .font(.custom("digital-7mono", size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
                     .opacity(0.05)
                     .padding(.leading,20)
                 Spacer()
-            }            
+            }
             HStack{
-                Text("8888")
+                Text(screenValue)
+                    .kerning(5)
                     .lineLimit(1)
-                    .font(.custom("Digital", size: (UIScreen.main.bounds.width - (5*12)) / 5.25))
+                    .font(.custom("digital-7mono", size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
                     .padding(.leading,20)
+                    .opacity(0.85)
                 Spacer()
             }
         }
     }
+    
+    
 }
 
 struct ScreenView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ScreenView()
+            ScreenView(screenValue: .constant("0"), currentOperation: .constant(.none), nextNumber: .constant(0))
                 .previewLayout(.sizeThatFits)
         }
     }

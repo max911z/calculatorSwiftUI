@@ -25,7 +25,7 @@ enum calcButton: String{
     case multiply = "x"
     case clear = "AC"
     case equal = "="
-    case decimal = ","
+    case decimal = "."
     case percent = "%"
     case negative = "-/+"
     
@@ -46,5 +46,8 @@ enum calcButton: String{
             return Color.init("darkButtonColor")
         }
     }
-    
+}
+
+enum Operation {
+    case add, subtract, multiply, divide, none
 }

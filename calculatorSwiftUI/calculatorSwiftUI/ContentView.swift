@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var screenValue = "0"
+    @State var currentOperation: Operation = .none
+    @State var nextNumber = 0.0
+    @State var answer = false
+    @State var calc = false
+    
     var body: some View {
         ZStack{
             Color.init("backgroundColor").edgesIgnoringSafeArea(.all)
@@ -20,10 +27,12 @@ struct ContentView: View {
                     Spacer()
                 }
                 Spacer()
-                ScreenView()
-                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 25, trailing: 24))
-                KeyboardView()
+                ScreenView(screenValue: $screenValue, currentOperation: $currentOperation, nextNumber: $nextNumber)
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                Spacer()
+                KeyboardView(screenValue: $screenValue, currentOperation: $currentOperation, nextNumber: $nextNumber, answer: $answer, calc: $calc)
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                Spacer()
             }
             .padding(.bottom, 20)
         }
