@@ -31,13 +31,13 @@ struct KeyboardView: View {
                         self.buttonPress(button: j)
                     }, label: {
                         Text(j.rawValue)
-                            .font(.custom("Montserrat-Bold", size: 32))
+                            .font(.custom(Const.buttonFont, size: 32))
                             .frame(width: self.buttonWidth(item: j), height: self.buttonHeight(), alignment: .center)
                             .background(j.buttonColor)
                             .foregroundColor(j.foregroundColor)
                             .cornerRadius(15)
-                            .shadow(color: Color("lightShadow"), radius: 5, x: -3, y: -3)
-                            .shadow(color: Color("darkShadow"), radius: 5, x: 3, y: 3)
+                            .shadow(color: Color(Const.buttonLightShadowColor), radius: 5, x: -3, y: -3)
+                            .shadow(color: Color(Const.buttonDarkShadowColor), radius: 5, x: 3, y: 3)
                     })
                 }
             }
@@ -46,16 +46,12 @@ struct KeyboardView: View {
     }
     
     func buttonPress(button: calcButton) {
-        
-        
         switch button {
         case .add, .subtract, .multiply, .divide, .equal:
             if button == .add{
                 self.calc = true
                 self.currentOperation = .add
-                //print("ScreenValue:", Double(self.screenValue) ?? 0)
                 self.nextNumber = Double(self.screenValue) ?? 0
-                //print("nextNumber:", self.nextNumber )
             }
             else if button == .subtract{
                 self.calc = true
@@ -74,10 +70,9 @@ struct KeyboardView: View {
             }
             else if button == .equal{
                 self.answer = true
-                //print(answer, "НАЖАТО РАВНО!")
                 
-                let nextValue = self.nextNumber
-                let currentValue = Double(self.screenValue) ?? 0
+                let nextValue = Decimal(self.nextNumber)
+                let currentValue = Decimal(Double(self.screenValue) ?? 0)
                 
                 switch self.currentOperation {
                 case .add: self.screenValue = "\(nextValue + currentValue)"
@@ -87,29 +82,39 @@ struct KeyboardView: View {
                 case .none: break
                 }
                 
+                if Double(self.screenValue) ?? 0 > Double(Int.max){
+                    self.screenValue = "Error"
+                    break
+                }
+                
                 if round(Double(self.screenValue) ?? 0) == Double(self.screenValue) ?? 0{
-                    
                     let number = Int(Double(self.screenValue) ?? 0)
-                    //print("answer", number)
                     self.screenValue = String(number)
                 }
                 
                 let negativeNumber = Double(self.screenValue)
-                
-                if String(describing: negativeNumber).count > 10{
+                if self.screenValue.count > 10{
                     let formatter = NumberFormatter()
-                    formatter.positiveFormat = "0.###E+0"
+                    formatter.positiveFormat = Const.scientificFormat
                     if let scientificFormatted = formatter.string(for: negativeNumber) {
                         self.screenValue = String(scientificFormatted)
                     }
-                } else{
-                    self.screenValue = String(describing: negativeNumber)
                 }
-                
-               
             }
             
         case .negative:
+            
+            if self.screenValue.contains("E"){
+                if self.screenValue.contains("-"){
+                    self.screenValue.removeFirst()
+                } else{
+                    self.screenValue = "-\(screenValue)"
+                    break
+                }                
+                break
+            }
+            
+            let negativeNumber = Double(self.screenValue)
             if round(Double(self.screenValue) ?? 0) == Double(self.screenValue) ?? 0{
                 var number = Int(Double(self.screenValue) ?? 0)
                 number *= (-1)
@@ -120,36 +125,27 @@ struct KeyboardView: View {
                     self.screenValue = String(number)
             }
             
-            let negativeNumber = Double(self.screenValue)
-            
-            if String(describing: negativeNumber).count > 10{
+            if self.screenValue.count > 10{
                 let formatter = NumberFormatter()
-                formatter.positiveFormat = "0.###E+0"
-                if let scientificFormatted = formatter.string(for: negativeNumber) {
+                formatter.positiveFormat = Const.scientificFormat
+                if let scientificFormatted = formatter.string(for: negativeNumber){
                     self.screenValue = String(scientificFormatted)
                 }
-            } else{
-                self.screenValue = String(describing: negativeNumber)
             }
             
-                
-           
         case .percent:
             var decimalNumber = Decimal(Double(self.screenValue) ?? 0)
             decimalNumber /= 100
             
             if String(describing: decimalNumber).count > 10{
                 let formatter = NumberFormatter()
-                formatter.positiveFormat = "0.###E+0"
+                formatter.positiveFormat = Const.scientificFormat
                 if let scientificFormatted = formatter.string(for: decimalNumber) {
                     self.screenValue = String(scientificFormatted)
                 }
-                
             } else{
                 self.screenValue = String(describing: decimalNumber)
             }
-            
-            
             
         case .clear:
             screenValue = "0"
@@ -159,8 +155,7 @@ struct KeyboardView: View {
                 let number = button.rawValue
                 self.screenValue = "\(screenValue)\(number)"
             }
-            
-            
+                        
         default:
             let number = button.rawValue
             

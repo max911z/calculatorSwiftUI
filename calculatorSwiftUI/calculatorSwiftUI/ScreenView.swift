@@ -7,47 +7,72 @@
 
 import SwiftUI
 
-
+struct CalculationState {
+    
+    var currentNumber: Double = 0
+    let characterLimit = 7
+    var storedNumber: Double?
+    //var storedAction: ActionView.Action?
+    
+    
+    mutating func appendNumber(_ number: Double) {
+        if number.truncatingRemainder(dividingBy: 1) == 0 && currentNumber.truncatingRemainder(dividingBy: 1) == 0 {
+            currentNumber = 10 * currentNumber + number
+        } else {
+            currentNumber = number
+        }
+        
+    }
+}
 
 struct ScreenView: View {
     
     @Binding var screenValue : String
     @Binding var currentOperation: Operation
     @Binding var nextNumber : Double
+    @State var state = CalculationState()
     
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.init("initColor"), Color.init("finalColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.init(Const.initColorGradient), Color.init(Const.finalColorGradient)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .frame(maxWidth: .infinity, maxHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.init("backgroundColor"))
-                        .shadow(color: Color.black, radius: 9, x: 0, y: 0)
+                        .stroke(Color.init(Const.backgroundColor))
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 0)
                 )
                 .clipped()
+            
             HStack{
-                Text("8888888888")
-                    .kerning(5)
+                Text(Const.screenViewPlaceholder)
+                    .kerning(4)
                     .lineLimit(1)
-                    .font(.custom("digital-7mono", size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
+                    .font(.custom(Const.screenViewFont, size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
                     .opacity(0.05)
                     .padding(.leading,20)
                 Spacer()
             }
+            
             HStack{
                 Text(screenValue)
-                    .kerning(5)
+                    .kerning(4)
                     .lineLimit(1)
-                    .font(.custom("digital-7mono", size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
+                    .font(.custom(Const.screenViewFont, size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
                     .padding(.leading,20)
                     .opacity(0.85)
+                    .gesture(DragGesture(minimumDistance:0, coordinateSpace: .local)
+                                .onEnded({ value in
+                                    if value.translation.width > 1 {
+                                        if screenValue.count > 1 {
+                                            screenValue = String(screenValue.dropLast())
+                                        }
+                                    }
+                                }))
                 Spacer()
             }
         }
     }
-    
-    
 }
 
 struct ScreenView_Previews: PreviewProvider {

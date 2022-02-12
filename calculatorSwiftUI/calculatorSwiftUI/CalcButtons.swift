@@ -32,18 +32,18 @@ enum calcButton: String{
     var buttonColor: Color{
         switch self {
         case .subtract, .add, .divide, .multiply, .equal:
-            return Color.init("darkButtonColor")
+            return Color.init(Const.darkButtonColor)
         default:
-            return Color.init("lightButtonColor")
+            return Color.init(Const.lightButtonColor)
         }
     }
     
     var foregroundColor: Color{
         switch self {
         case .subtract, .add, .divide, .multiply, .equal:
-            return Color.init("lightButtonColor")
+            return Color.init(Const.lightButtonColor)
         default:
-            return Color.init("darkButtonColor")
+            return Color.init(Const.darkButtonColor)
         }
     }
 }

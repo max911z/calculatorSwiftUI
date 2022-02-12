@@ -17,12 +17,12 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            Color.init("backgroundColor").edgesIgnoringSafeArea(.all)
+            Color.init(Const.backgroundColor).edgesIgnoringSafeArea(.all)
             
             VStack{
                 HStack {
-                    Text("Calculator")
-                        .font(.custom("MuseoSansCyrl-700", size: (UIScreen.main.bounds.width - (5*12)) / 11))
+                    Text(Const.appName)
+                        .font(.custom(Const.appNameFont, size: (UIScreen.main.bounds.width - (5*12)) / 11))
                         .padding(EdgeInsets(top: 24, leading: 24, bottom: 0, trailing: 0))
                     Spacer()
                 }

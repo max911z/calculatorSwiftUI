@@ -21,6 +21,7 @@
 		BE7F213D27B6502000254C83 /* Digitalnumbers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */; };
 		BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB336FD27B531360014E4A0 /* CalcButtons.swift */; };
 		BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3370227B574D40014E4A0 /* KeyboardView.swift */; };
+		BECA71A727B76EB60007E149 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA71A627B76EB60007E149 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digitalnumbers.ttf; sourceTree = "<group>"; };
 		BEB336FD27B531360014E4A0 /* CalcButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtons.swift; sourceTree = "<group>"; };
 		BEB3370227B574D40014E4A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		BECA71A627B76EB60007E149 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E827B14C970013469D /* Preview Content */,
 				BEB336FD27B531360014E4A0 /* CalcButtons.swift */,
+				BECA71A627B76EB60007E149 /* Constants.swift */,
 			);
 			path = calculatorSwiftUI;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */,
 				BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */,
 				BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */,
+				BECA71A727B76EB60007E149 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +324,7 @@
 				DEVELOPMENT_TEAM = R5CRVUNLL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = calculatorSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +346,7 @@
 				DEVELOPMENT_TEAM = R5CRVUNLL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = calculatorSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
