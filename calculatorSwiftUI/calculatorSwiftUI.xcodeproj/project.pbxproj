@@ -18,6 +18,7 @@
 		BE404DFC27B6552900142D02 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404DFB27B6552900142D02 /* digital-7.ttf */; };
 		BE404DFF27B6559600142D02 /* digital-7mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404DFE27B6559600142D02 /* digital-7mono.ttf */; };
 		BE404E0327B65A8700142D02 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404E0227B65A8700142D02 /* DigitalNumbers-Regular.ttf */; };
+		BE5DD0D727C26566009CA5DE /* VIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DD0D627C26566009CA5DE /* VIewModel.swift */; };
 		BE7F213D27B6502000254C83 /* Digitalnumbers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */; };
 		BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB336FD27B531360014E4A0 /* CalcButtons.swift */; };
 		BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3370227B574D40014E4A0 /* KeyboardView.swift */; };
@@ -38,6 +39,7 @@
 		BE404DFB27B6552900142D02 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		BE404DFE27B6559600142D02 /* digital-7mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7mono.ttf"; sourceTree = "<group>"; };
 		BE404E0227B65A8700142D02 /* DigitalNumbers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DigitalNumbers-Regular.ttf"; sourceTree = "<group>"; };
+		BE5DD0D627C26566009CA5DE /* VIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModel.swift; sourceTree = "<group>"; };
 		BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digitalnumbers.ttf; sourceTree = "<group>"; };
 		BEB336FD27B531360014E4A0 /* CalcButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtons.swift; sourceTree = "<group>"; };
 		BEB3370227B574D40014E4A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				BE1D25E427B14C960013469D /* ContentView.swift */,
 				BE1D260927B1865B0013469D /* ScreenView.swift */,
 				BEB3370227B574D40014E4A0 /* KeyboardView.swift */,
+				BE5DD0D627C26566009CA5DE /* VIewModel.swift */,
 				BE1D25E627B14C970013469D /* Assets.xcassets */,
 				BE1D25EB27B14C970013469D /* Info.plist */,
 				BE1D25F227B14E690013469D /* Fonts */,
@@ -191,6 +194,7 @@
 				BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */,
 				BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */,
 				BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */,
+				BE5DD0D727C26566009CA5DE /* VIewModel.swift in Sources */,
 				BECA71A727B76EB60007E149 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

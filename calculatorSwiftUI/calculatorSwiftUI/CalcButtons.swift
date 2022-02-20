@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum calcButton: String{
+enum CalcButton: String{
     case one = "1"
     case two = "2"
     case three = "3"
@@ -44,6 +44,19 @@ enum calcButton: String{
             return Color.init(Const.lightButtonColor)
         default:
             return Color.init(Const.darkButtonColor)
+        }
+    }
+    
+    var operation: Operation{
+        switch self {
+        case .subtract:
+            return .subtract
+        case .add:
+            return .add
+        case .divide:
+            return .divide
+        default:
+            return .multiply
         }
     }
 }

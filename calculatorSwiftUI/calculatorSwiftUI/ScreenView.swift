@@ -7,30 +7,11 @@
 
 import SwiftUI
 
-struct CalculationState {
-    
-    var currentNumber: Double = 0
-    let characterLimit = 7
-    var storedNumber: Double?
-    //var storedAction: ActionView.Action?
-    
-    
-    mutating func appendNumber(_ number: Double) {
-        if number.truncatingRemainder(dividingBy: 1) == 0 && currentNumber.truncatingRemainder(dividingBy: 1) == 0 {
-            currentNumber = 10 * currentNumber + number
-        } else {
-            currentNumber = number
-        }
-        
-    }
-}
-
 struct ScreenView: View {
     
     @Binding var screenValue : String
     @Binding var currentOperation: Operation
     @Binding var nextNumber : Double
-    @State var state = CalculationState()
     
     var body: some View {
         ZStack{
