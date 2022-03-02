@@ -21,5 +21,4 @@ struct Const {
     static let scientificFormat = "0.###E+0"
     static let darkButtonColor = "darkButtonColor"
     static let lightButtonColor = "lightButtonColor"
-    
 }

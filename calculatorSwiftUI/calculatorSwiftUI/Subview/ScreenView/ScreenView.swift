@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ScreenView: View {
+    @ObservedObject private var screenViewModel: ScreenViewModel
     
-    @Binding var screenValue : String
-    @Binding var currentOperation: Operation
-    @Binding var nextNumber : Double
+    init(screenViewModel: ScreenViewModel){
+        self.screenViewModel = screenViewModel
+    }
     
     var body: some View {
         ZStack{
@@ -36,7 +37,7 @@ struct ScreenView: View {
             }
             
             HStack{
-                Text(screenValue)
+                Text(screenViewModel.screenValue)
                     .kerning(4)
                     .lineLimit(1)
                     .font(.custom(Const.screenViewFont, size: (UIScreen.main.bounds.width - (5*12)) / 5.5))
@@ -44,12 +45,12 @@ struct ScreenView: View {
                     .opacity(0.85)
                     .gesture(DragGesture(minimumDistance:0, coordinateSpace: .local)
                                 .onEnded({ value in
-                                    if value.translation.width > 1 {
-                                        if screenValue.count > 1 {
-                                            screenValue = String(screenValue.dropLast())
-                                        }
-                                    }
-                                }))
+                        if value.translation.width > 1 {
+                            if screenViewModel.screenValue.count > 1 {
+                                screenViewModel.screenValue = String(screenViewModel.screenValue.dropLast())
+                            }
+                        }
+                    }))
                 Spacer()
             }
         }
@@ -59,7 +60,7 @@ struct ScreenView: View {
 struct ScreenView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ScreenView(screenValue: .constant("0"), currentOperation: .constant(.none), nextNumber: .constant(0))
+            ScreenView(screenViewModel: ScreenViewModel(screenValue: "0"))
                 .previewLayout(.sizeThatFits)
         }
     }

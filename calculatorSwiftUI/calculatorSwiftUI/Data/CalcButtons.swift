@@ -60,7 +60,3 @@ enum CalcButton: String{
         }
     }
 }
-
-enum Operation {
-    case add, subtract, multiply, divide, none
-}

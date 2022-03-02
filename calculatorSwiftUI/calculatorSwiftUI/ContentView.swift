@@ -9,11 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var screenValue = "0"
-    @State var currentOperation: Operation = .none
-    @State var nextNumber = 0.0
-    @State var answer = false
-    @State var calc = false
+    @EnvironmentObject private var viewModel: MainViewModel
     
     var body: some View {
         ZStack{
@@ -27,10 +23,10 @@ struct ContentView: View {
                     Spacer()
                 }
                 Spacer()
-                ScreenView(screenValue: $screenValue, currentOperation: $currentOperation, nextNumber: $nextNumber)
+                ScreenView(screenViewModel: viewModel.screenViewModel)
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                 Spacer()
-                KeyboardView(screenValue: $screenValue, currentOperation: $currentOperation, nextNumber: $nextNumber, answer: $answer, calc: $calc)
+                KeyboardView(keyboardViewModel: viewModel.keyboardViewModel)
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                 Spacer()
             }

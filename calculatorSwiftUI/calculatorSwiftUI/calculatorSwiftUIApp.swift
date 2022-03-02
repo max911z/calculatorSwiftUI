@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct calculatorSwiftUIApp: App {
+struct CalculatorSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView()            
+                .environmentObject(MainViewModel())
         }
     }
 }

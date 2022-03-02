@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */; };
+		BE1BD75B27CF16D200E07FCF /* ScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BD75A27CF16D200E07FCF /* ScreenViewModel.swift */; };
+		BE1BD75F27CF175C00E07FCF /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BD75E27CF175C00E07FCF /* Operation.swift */; };
+		BE1D25E327B14C960013469D /* CalculatorSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D25E227B14C960013469D /* CalculatorSwiftUIApp.swift */; };
 		BE1D25E527B14C960013469D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D25E427B14C960013469D /* ContentView.swift */; };
 		BE1D25E727B14C970013469D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25E627B14C970013469D /* Assets.xcassets */; };
 		BE1D25EA27B14C970013469D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D25E927B14C970013469D /* Preview Assets.xcassets */; };
@@ -18,7 +20,8 @@
 		BE404DFC27B6552900142D02 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404DFB27B6552900142D02 /* digital-7.ttf */; };
 		BE404DFF27B6559600142D02 /* digital-7mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404DFE27B6559600142D02 /* digital-7mono.ttf */; };
 		BE404E0327B65A8700142D02 /* DigitalNumbers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE404E0227B65A8700142D02 /* DigitalNumbers-Regular.ttf */; };
-		BE5DD0D727C26566009CA5DE /* VIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DD0D627C26566009CA5DE /* VIewModel.swift */; };
+		BE5DD0D727C26566009CA5DE /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DD0D627C26566009CA5DE /* KeyboardViewModel.swift */; };
+		BE7C326F27C4F6A9000D2C7F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C326E27C4F6A9000D2C7F /* MainViewModel.swift */; };
 		BE7F213D27B6502000254C83 /* Digitalnumbers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */; };
 		BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB336FD27B531360014E4A0 /* CalcButtons.swift */; };
 		BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3370227B574D40014E4A0 /* KeyboardView.swift */; };
@@ -26,8 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE1BD75A27CF16D200E07FCF /* ScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewModel.swift; sourceTree = "<group>"; };
+		BE1BD75E27CF175C00E07FCF /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		BE1D25DF27B14C960013469D /* calculatorSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculatorSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorSwiftUIApp.swift; sourceTree = "<group>"; };
+		BE1D25E227B14C960013469D /* CalculatorSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSwiftUIApp.swift; sourceTree = "<group>"; };
 		BE1D25E427B14C960013469D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE1D25E627B14C970013469D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1D25E927B14C970013469D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,7 +44,8 @@
 		BE404DFB27B6552900142D02 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		BE404DFE27B6559600142D02 /* digital-7mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7mono.ttf"; sourceTree = "<group>"; };
 		BE404E0227B65A8700142D02 /* DigitalNumbers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DigitalNumbers-Regular.ttf"; sourceTree = "<group>"; };
-		BE5DD0D627C26566009CA5DE /* VIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModel.swift; sourceTree = "<group>"; };
+		BE5DD0D627C26566009CA5DE /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		BE7C326E27C4F6A9000D2C7F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BE7F213C27B6502000254C83 /* Digitalnumbers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digitalnumbers.ttf; sourceTree = "<group>"; };
 		BEB336FD27B531360014E4A0 /* CalcButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtons.swift; sourceTree = "<group>"; };
 		BEB3370227B574D40014E4A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1BD75927CF169B00E07FCF /* ScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D260927B1865B0013469D /* ScreenView.swift */,
+				BE1BD75A27CF16D200E07FCF /* ScreenViewModel.swift */,
+			);
+			path = ScreenView;
+			sourceTree = "<group>";
+		};
+		BE1BD75C27CF16ED00E07FCF /* KeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				BEB3370227B574D40014E4A0 /* KeyboardView.swift */,
+				BE5DD0D627C26566009CA5DE /* KeyboardViewModel.swift */,
+			);
+			path = KeyboardView;
+			sourceTree = "<group>";
+		};
+		BE1BD75D27CF173400E07FCF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEB336FD27B531360014E4A0 /* CalcButtons.swift */,
+				BE1BD75E27CF175C00E07FCF /* Operation.swift */,
+				BECA71A627B76EB60007E149 /* Constants.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE1BD76027CF222300E07FCF /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BD75927CF169B00E07FCF /* ScreenView */,
+				BE1BD75C27CF16ED00E07FCF /* KeyboardView */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		BE1D25D627B14C960013469D = {
 			isa = PBXGroup;
 			children = (
@@ -76,17 +119,15 @@
 		BE1D25E127B14C960013469D /* calculatorSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BE1D25E227B14C960013469D /* calculatorSwiftUIApp.swift */,
+				BE1D25E227B14C960013469D /* CalculatorSwiftUIApp.swift */,
 				BE1D25E427B14C960013469D /* ContentView.swift */,
-				BE1D260927B1865B0013469D /* ScreenView.swift */,
-				BEB3370227B574D40014E4A0 /* KeyboardView.swift */,
-				BE5DD0D627C26566009CA5DE /* VIewModel.swift */,
-				BE1D25E627B14C970013469D /* Assets.xcassets */,
+				BE7C326E27C4F6A9000D2C7F /* MainViewModel.swift */,
+				BE1BD76027CF222300E07FCF /* Subview */,
+				BE1BD75D27CF173400E07FCF /* Data */,
 				BE1D25EB27B14C970013469D /* Info.plist */,
 				BE1D25F227B14E690013469D /* Fonts */,
 				BE1D25E827B14C970013469D /* Preview Content */,
-				BEB336FD27B531360014E4A0 /* CalcButtons.swift */,
-				BECA71A627B76EB60007E149 /* Constants.swift */,
+				BE1D25E627B14C970013469D /* Assets.xcassets */,
 			);
 			path = calculatorSwiftUI;
 			sourceTree = "<group>";
@@ -190,12 +231,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1D260A27B1865B0013469D /* ScreenView.swift in Sources */,
+				BE1BD75B27CF16D200E07FCF /* ScreenViewModel.swift in Sources */,
 				BE1D25E527B14C960013469D /* ContentView.swift in Sources */,
+				BE1BD75F27CF175C00E07FCF /* Operation.swift in Sources */,
 				BEB336FE27B531360014E4A0 /* CalcButtons.swift in Sources */,
 				BEB3370327B574D40014E4A0 /* KeyboardView.swift in Sources */,
-				BE1D25E327B14C960013469D /* calculatorSwiftUIApp.swift in Sources */,
-				BE5DD0D727C26566009CA5DE /* VIewModel.swift in Sources */,
+				BE1D25E327B14C960013469D /* CalculatorSwiftUIApp.swift in Sources */,
+				BE5DD0D727C26566009CA5DE /* KeyboardViewModel.swift in Sources */,
 				BECA71A727B76EB60007E149 /* Constants.swift in Sources */,
+				BE7C326F27C4F6A9000D2C7F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +369,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"calculatorSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = R5CRVUNLL9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = calculatorSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -347,7 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"calculatorSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = R5CRVUNLL9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = calculatorSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
