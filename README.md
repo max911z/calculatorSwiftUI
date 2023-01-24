@@ -1,3 +1,4 @@
+# calculatorSwiftUI
 <h2 align="left">Project characteristics and tech-stack</h2>
 
 <ul>
