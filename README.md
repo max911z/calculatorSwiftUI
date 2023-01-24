@@ -1,5 +1,3 @@
-<h1 align="left">Calculator</h1>
-<rp>This application is a complete copy of the built-in IOS calculator with a neomorphic design</rp>
 <h2 align="left">Project characteristics and tech-stack</h2>
 
 <ul>
